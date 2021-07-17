@@ -1,6 +1,14 @@
 import { NgModule } from '@angular/core';
-import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
+
+// Custom component import
+import { LoginComponent } from './login/login.component';
+
+// Angular Material imports
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -10,7 +18,11 @@ const routes: Routes = [
   declarations: [
     LoginComponent
   ],
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes),
+    MatCardModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatDividerModule],
   exports: [RouterModule]
 })
 export class UserModule { }

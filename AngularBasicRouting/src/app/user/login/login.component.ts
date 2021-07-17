@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit(){
+  submit():void{
     this.router.navigate(['/products']);
   }
 }

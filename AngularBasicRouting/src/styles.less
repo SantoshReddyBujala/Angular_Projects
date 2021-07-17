@@ -1,4 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+// written in css with less
+html,
+body {
+    height: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin     : 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@one-em    : 1em;
+@full-width: 100%;
+
+.main-div {
+    display        : flex;
+    justify-content: center;
+    width          : @full-width;
+}
+
+.mat-card-ca {
+    width: @one-em * 30;
+}
+
+.btn-center {
+    .main-div();
+    margin-top: @one-em;
+}
+
+.card-margin-top {
+    margin-top: @one-em *5;
+}
+.left-margin {
+    margin-left: @one-em;
+}
+.text-margin-top{
+    margin-top: @one-em;
+}
