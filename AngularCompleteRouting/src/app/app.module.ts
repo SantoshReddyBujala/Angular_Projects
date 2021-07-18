@@ -9,7 +9,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { UserModule } from './user/user.module';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,6 @@ import { UserModule } from './user/user.module';
     BrowserModule,
     MatToolbarModule,
     MatIconModule,
-    UserModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
