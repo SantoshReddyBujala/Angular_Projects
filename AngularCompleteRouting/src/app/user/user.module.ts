@@ -1,6 +1,15 @@
 import { NgModule } from '@angular/core';
-import { LoginComponent } from './login/login.component';
+import { CommonModule } from '@angular/common';  
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+
+import { LoginComponent } from './login/login.component';
+
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent }
@@ -10,7 +19,13 @@ const routes: Routes = [
   declarations: [
     LoginComponent
   ],
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes),
+    CommonModule,
+    FormsModule,
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule],
   exports: [RouterModule]
 })
 export class UserModule { }

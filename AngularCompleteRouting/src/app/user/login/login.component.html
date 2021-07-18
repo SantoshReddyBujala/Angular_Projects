@@ -1,1 +1,33 @@
-<p>login works!</p>
+<div class="login-card">
+    <mat-card class="login-card-bg">
+        <form class="example-form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" formControlName="name">
+                <mat-error *ngIf="f.name && f.name.errors?.required">
+                    Please enter Username
+                </mat-error>
+                <mat-error *ngIf="f.name && f.name.errors?.minlength">
+                    Username minimum of 8 characters length
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" placeholder="Password" formControlName="pwd">
+                <mat-error *ngIf="f.pwd && f.pwd.errors?.required">
+                    Please enter Password
+                </mat-error>
+                <mat-error *ngIf="f.pwd && f.pwd.errors?.minlength">
+                    Password minimum of 8 characters length
+                </mat-error>
+            </mat-form-field>
+            <div class="login_sub_btn">
+                <button type="submit" mat-raised-button color="primary" [disabled]="!profileForm.valid">Submit</button>
+            </div>
+        </form>
+        <div class="top-em">
+            <a color="primary">New User</a>
+            <a class="new-user" color="primary">Forgot Password</a>
+        </div>
+    </mat-card>
+</div>
