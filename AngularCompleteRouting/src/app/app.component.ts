@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { GlobalConstants } from './common/global-constants';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'AngularCompleteRouting';
+  componetLabels =GlobalConstants;
+  title = this.componetLabels.siteTitle
 }
