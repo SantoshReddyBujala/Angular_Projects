@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { HttpClientModule } from '@angular/common/http';
+import { AngularMaterialModule } from './angular-material/angular-material.module';
+
+
 
 
 @NgModule({
@@ -22,12 +22,12 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     BrowserModule,
-    MatToolbarModule,
-    MatIconModule,
+    AngularMaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
