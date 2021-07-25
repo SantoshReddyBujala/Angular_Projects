@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { CustomerService } from 'src/app/sevices/customer.service';
+import { CustomerService } from './../../sevices/customer.service';
 
 @Component({
   selector: 'app-products-list',

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CustomerService } from 'src/app/sevices/customer.service';
+import { CustomerService } from './../../sevices/customer.service';
 
 @Component({
   selector: 'app-login',
