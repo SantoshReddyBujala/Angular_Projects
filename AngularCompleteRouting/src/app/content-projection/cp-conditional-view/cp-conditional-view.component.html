@@ -1,0 +1,16 @@
+<div> 
+    Ng-template Content 
+    <div *ngIf="false else showNgTemplateContent"> 
+       Shouldn't be displayed 
+    </div>
+ </div>
+  
+ <ng-template #showNgTemplateContent> Should be displayed
+ </ng-template>
+
+ <ng-container *ngIf="details">
+    <div *ngFor="let info of details">
+      {{ info }}
+    </div>
+  </ng-container>
+
