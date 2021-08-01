@@ -1,0 +1,7 @@
+<h1> Life Cycle Hook Concept / Parent to child/ Child to Parent Communication</h1>
+<input type="text" placeholder="Input Value" [(ngModel)]="userInput">
+<app-child-componet [data]="userInput"></app-child-componet>
+
+<app-child-componet (dataEvent)="receiveData($event)"></app-child-componet>
+
+

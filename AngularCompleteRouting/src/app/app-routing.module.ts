@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'contentprojection',
     loadChildren: () => import('./content-projection/content-projection.module').then(m => m.ContentProjectionModule)
+  },  
+  {
+    path: 'lifecycle',
+    loadChildren: () => import('./life-cycle-hooks/life-cycle-hooks.module').then(m => m.LifeCycleHooksModule)
   },
   {path:'**', component:PageNotFoundComponent},
 ];
