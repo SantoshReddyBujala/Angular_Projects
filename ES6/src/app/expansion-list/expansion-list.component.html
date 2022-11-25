@@ -1,0 +1,35 @@
+<mat-nav-list>
+
+	<mat-list-item (click)="toggle[1] = !toggle[1]">
+		<a matLine>Item List 1</a>
+		<span>
+      <mat-icon *ngIf="!toggle[1]">expand_more</mat-icon>
+      <mat-icon *ngIf="toggle[1]">expand_less</mat-icon>
+     </span>
+	</mat-list-item>
+
+	<div [hidden]="!toggle[1]">
+		<mat-selection-list>
+			<mat-list-option *ngFor="let item of items" checkboxPosition="before">
+				{{ item }}
+			</mat-list-option>
+		</mat-selection-list>
+	</div>
+
+	<mat-list-item (click)="toggle[2] = !toggle[2]">
+		<a matLine>Item List 2</a>
+		<span>
+      <mat-icon *ngIf="!toggle[2]">expand_more</mat-icon>
+      <mat-icon *ngIf="toggle[2]">expand_less</mat-icon>
+     </span>
+	</mat-list-item>
+
+	<div [hidden]="!toggle[2]">
+		<mat-selection-list>
+			<mat-list-option *ngFor="let item of items">
+				{{ item }}
+			</mat-list-option>
+		</mat-selection-list>
+	</div>
+
+</mat-nav-list>
