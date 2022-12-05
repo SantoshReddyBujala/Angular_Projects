@@ -1,12 +1,5 @@
-<mat-accordion>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title> GEEKSFORGEEKS </mat-panel-title>
-      <mat-panel-description>
-        Click here to expand the panel
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-
-    <p>One stop portal to all Computer Science Subjects.</p>
-  </mat-expansion-panel>
-</mat-accordion>
+<h2 mat-dialog-title>MyTitle</h2>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true">Close</button>
+</mat-dialog-actions>
