@@ -8,24 +8,23 @@
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": false,
-    "strictNullChecks": false,
+    "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "es2020",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
     "lib": [
-      "es2020",
+      "ES2022",
       "dom"
-    ],
-    "useDefineForClassFields": false
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

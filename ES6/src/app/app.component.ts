@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogConfig} from '@angular/material/dialog';
 import Features from '../assets/features.json';
 import { ExpansionListComponent } from './expansion-list/expansion-list.component';
 
@@ -19,7 +19,7 @@ export interface DialogData {
   styleUrls: ['./app.component.less'],
 })
 export class AppComponent {
-  title = 'ES6';
+  title = 'ES6 Features';
   features: FEATURE[] = Features;
   animal: string;
   name: string;
@@ -27,15 +27,14 @@ export class AppComponent {
 
   featureDetails(id: number) {
     console.log(id);
-    const dialogRef = this.dialog.open(ExpansionListComponent, {
-      width: '250px',
-      height:'300px',
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
-    });
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.data = {
+      id: 1,
+      title: 'Angular For Beginners'
+  };
+    this.dialog.open(ExpansionListComponent, dialogConfig);
   }
 }
 
