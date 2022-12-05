@@ -5,6 +5,7 @@ import {
   MatButtonModule,
   MatIconModule,
   MatListModule,
+  MatDialogModule
 } from '@angular/material';
 
 let MAT_MODULES = [
@@ -12,6 +13,7 @@ let MAT_MODULES = [
   MatButtonModule,
   MatIconModule,
   MatListModule,
+  MatDialogModule
 ];
 
 @NgModule({
