@@ -1,0 +1,6 @@
+<div class="text_center">
+  <h1 class="primary-heading">{{title}}</h1>
+</div>
+<mat-list role="list" *ngFor="let feature of features">
+  <mat-list-item role="listitem" (click)="featureDetails(feature?.id)">{{feature?.title}}</mat-list-item>
+</mat-list>
